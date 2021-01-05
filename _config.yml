@@ -96,7 +96,7 @@ search:
 
 neat_enable: true  #打开总开关
 neat_html:
-    enable: true      #打开压缩html文件开关
+    enable: false      #打开压缩html文件开关
     exclude:          #html的排除列表
 
 neat_css:
