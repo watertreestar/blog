@@ -2,12 +2,14 @@
 title: Vue.use初探
 date: 2018-12-21 12:19:54
 tags: [Vue,Vue.use]
-categories: Vue
+categories: 
+- Vue
+- Plugins
 ---
 
 
 
-##Vue.use
+## Vue.use
 
 ### 问题
 相信很多人在用Vue使用别人的组件时，会用到 `Vue.use()`。
