@@ -1,6 +1,7 @@
 body {
-  font-family: 'monaco', 'Noto Serif SC', "Noto Serif SC", sans-serif;
-  font-size : .8em;
+  font-family: 'Menlo', monospace, 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-size: .8em;
+  background: #fff;
 }
 
 html {
@@ -36,7 +37,7 @@ blockquote {
 }
 
 .post-body {
-  font-family: 'monaco', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'Menlo', 'Noto Serif SC', "Noto Serif SC", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -84,7 +85,6 @@ blockquote {
 }
 
 
-
 .content-wrap {
   border-radius: 0 0 3px 3px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -92,7 +92,7 @@ blockquote {
   width: calc(100% - 312px);
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
   .content-wrap {
     border-radius: initial;
     padding: 0;
@@ -100,7 +100,7 @@ blockquote {
   }
 }
 
-@media (max-width: 567px){
+@media (max-width: 567px) {
   .content-wrap {
     padding: initial !important;
   }
@@ -127,7 +127,9 @@ blockquote {
 .post-toc .nav .active > a {
   border-bottom-color: #0684bd;
   color: #0684bd;
+  line-height 2.5;
 }
+
 
 .sidebar-nav .sidebar-nav-active {
   border-bottom-color: #0684bd;
@@ -145,7 +147,7 @@ blockquote {
 
 .site-title {
   display: inline-block;
-  font-family: 'monaco', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'Menlo', monospace, 'Noto Serif SC', "Noto Serif SC", sans-serif;
   font-size: 1.575em;
   font-weight: normal;
   line-height: 1.5;
@@ -153,11 +155,11 @@ blockquote {
 }
 
 .header-inner {
-  font-family: 'monaco', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'Menlo', monospace, 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, a {
-  font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif
+  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif
 }
 
 .post-body {
@@ -181,6 +183,51 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 a, h1, h2, h3, h4, h5, h6 {
-  font-family: consolas,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-family: "Menlo", monospace, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
+
+.content-wrap, .post-block {
+  box-shadow: none;
+}
+
+.post-block {
+  box-shadow: none !important;
+}
+
+.pagination {
+  box-shadow: none !important;
+}
+
+.site-brand-container {
+  background: #fff;
+  color: #000;
+  border-bottom :1px solid #eee;
+}
+
+.site-meta * {
+  color: #000 !important;
+}
+
+.menu .menu-item a, .menu .menu-item span.exturl {
+  text-align: center;
+}
+
+.header-inner, .sidebar-inner {
+  border: 1px solid #eee;
+  box-shadow none;
+}
+
+.site-nav-right .toggle, .site-nav-toggle .toggle {
+  color: #000 !important;
+}
+
+.site-nav-right .toggle .toggle-line, .site-nav-toggle .toggle .toggle-line {
+  color: #000;
+  background :#000;
+}
+
+.site-nav-right {
+  display :block;
+}
+
 

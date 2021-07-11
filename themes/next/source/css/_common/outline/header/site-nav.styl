@@ -1,8 +1,8 @@
 .site-nav-toggle, .site-nav-right {
-  display: none;
 
   +mobile() {
     flex-column();
+    visibility :visible !important;
   }
 
   .toggle {
@@ -16,6 +16,10 @@
     }
   }
 }
+
+  .site-nav-toggle {
+    visibility :hidden;
+  }
 
 .site-nav {
   display: block;
