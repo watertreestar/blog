@@ -40,7 +40,9 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -Darchetyp
 
 创建好以后我们的项目结构如下：
 
-<img align="left" height="300" src="https://cdn.jsdelivr.net/gh/watertreestar/CDN@master/picimage-20210826222721918.png">
+
+![](https://cdn.jsdelivr.net/gh/watertreestar/CDN@master/picimage-20210826222721918.png)
+
 
 接下来看一下不同的配置下依赖查找的路径
 
