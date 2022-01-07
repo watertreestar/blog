@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 幸遥's blog
+title: 幸遥同学
 subtitle: Java,分布式,大数据
 description: A simple blog, code repository, coding record
 author: Xingyao
@@ -13,10 +13,11 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://chenjungle.cn
+url: https://watertreestar.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:id/
 permalink_defaults:
+    lang: en
 
 # Directory
 source_dir: source
@@ -73,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: oranges
 
 # Deployment
 deploy:
