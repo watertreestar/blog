@@ -1,5 +1,5 @@
 ---
-title: JDK线程池
+title: Java线程池
 date: 2018-09-04 10:53:47
 tags: [线程池，Java基础]
 categoreis: 多线程
@@ -406,13 +406,10 @@ public ArrayBlockingQueue(int capacity) {
 
 `ThreadPoolExecutor` 允许自定义当添加任务失败后的执行策略。你可以调用线程池的 `setRejectedExecutionHandler()`方法，用自定义的`RejectedExecutionHandler` 对象替换现有的策略`ThreadPoolExecutor`提供的默认的处理策略是直接丢弃，同时抛异常信息，`ThreadPoolExecutor` 提供 4 个现有的策略，分别是：
 
-##### 　ThreadPoolExecutor.AbortPolicy：表示拒绝任务并抛出异常
-
-#####　ThreadPoolExecutor.DiscardPolicy：表示拒绝任务但不做任何动作
-
-#####  ThreadPoolExecutor.CallerRunsPolicy：表示拒绝任务，并在调用者的线程中直接执行该任务
-
-#####　 ThreadPoolExecutor.DiscardOldestPolicy：表示先丢弃任务队列中的第一个任务，然后把这个任务加进队列
+- ThreadPoolExecutor.AbortPolicy：表示拒绝任务并抛出异常
+- ThreadPoolExecutor.DiscardPolicy：表示拒绝任务但不做任何动作
+- ThreadPoolExecutor.CallerRunsPolicy：表示拒绝任务，并在调用者的线程中直接执行该任务
+- ThreadPoolExecutor.DiscardOldestPolicy：表示先丢弃任务队列中的第一个任务，然后把这个任务加进队列
 
 
 

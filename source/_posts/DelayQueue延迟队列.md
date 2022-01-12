@@ -7,7 +7,7 @@ categories: Java基础
 
 
 
-##  延迟阻塞队列DelayQueue
+###  介绍
 
 DelayQueue 是一个支持延时获取元素的阻塞队列， 
 内部采用优先队列 PriorityQueue 存储元素，

@@ -9,8 +9,6 @@ categories:
 
 
 
-## Vue.use
-
 ### 问题
 相信很多人在用Vue使用别人的组件时，会用到 `Vue.use()`。
 例如：`Vue.use(VueRouter)、Vue.use(MintUI)`。

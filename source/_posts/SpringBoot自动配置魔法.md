@@ -5,7 +5,6 @@ tags: [springboot,spring]
 categories: spring boot
 ---
 
-## Spring自动配置
 
 ### 从@SpringBootApplication注解说起
 

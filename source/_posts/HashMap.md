@@ -1,11 +1,11 @@
 ---
-title: HashMap?
+title: Java HashMap
 date: 2018-08-20 14:58:19
 tags: [Java,集合]
 categories: Java基础
 ---
 
-#### HashMap
+# 介绍
 
 HashMap是Java集合中重要的一个数据结构，作为`key-value`形式的存在，被广泛使用
 
@@ -13,17 +13,17 @@ HashMap是Java集合中重要的一个数据结构，作为`key-value`形式的�
 
 
 
-#### HashMap在JDK 1.7中的实现
+# HashMap在JDK 1.7中的实现
 
 <!--more-->
 
-##### 1.7中的数据结构
+## 1.7中的数据结构
 
 ![](/img/HashMap1.7中的数据结构.png)
 
 
 
-#####  1.7中HashMap几个关键的成员变量
+## 1.7中HashMap几个关键的成员变量
 
 ![](/img/HashMap1.7中关键的成员变量.png)
 
@@ -35,13 +35,13 @@ HashMap是Java集合中重要的一个数据结构，作为`key-value`形式的�
 6. 桶大小，可在初始化时显式指定。
 7. 负载因子，可在初始化时显式指定
 
-#####  负载因子
+##  负载因子
 
 给定的默认容量为 16，负载因子为 0.75。Map 在使用过程中不断的往里面存放数据，当数量达到了 `16 * 0.75 = 12` 就需要将当前 16 的容量进行扩容，而扩容这个过程涉及到 rehash、复制数据等操作
 
 
 
-##### Entry类
+## Entry类
 
 Entry 是 HashMap 中的一个内部类，从他的成员变量很容易看出：
 
@@ -50,7 +50,7 @@ Entry 是 HashMap 中的一个内部类，从他的成员变量很容易看出�
 - 开始的时候就提到 HashMap 是由数组和链表组成，所以这个 next 就是用于实现链表结构。
 - hash 存放的是当前 key 的 hashcode。
 
-##### put 方法
+## put 方法
 
 ```java
 public V put(K key, V value) {
@@ -85,7 +85,7 @@ put 操作的流程
 - 如果桶是一个链表则需要遍历判断里面的 hashcode、key 是否和传入 key 相等，如果相等则进行覆盖，并返回原来的值。
 - 如果桶是空的，说明当前位置没有数据存入；新增一个 Entry 对象写入当前位置。
 
-##### get 方法
+## get 方法
 
 ```java
 public V get(Object key) {
@@ -117,17 +117,17 @@ final Entry<K,V> getEntry(Object key) {
 - 为链表则需要遍历直到 key 及 hashcode 相等时候就返回值。
 - 啥都没取到就直接返回 null 
 
-#### HashMap在JDK 1.8中的实现
+# HashMap在JDK 1.8中的实现
 
 1.7中HashMap有一个问题就是，当Hash严重冲突时，链表就会越来越长，查找的效率就会越来越低
 
 因此在1.8中就优化了这个问题
 
-##### 1.8中的数据结构
+## 1.8中的数据结构
 
 ![](/img/HashMap1.8中的数据结构.png)
 
-##### 1.8中HashMap关键成员变量
+## 1.8中HashMap关键成员变量
 
 ```java
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
@@ -159,7 +159,7 @@ transient int size;
 - `TREEIFY_THRESHOLD` 用于判断是否需要将链表转换为红黑树的阈值。
 - HashEntry 修改为 `Node`，Node核心组成和1.7中的Entry一致
 
-##### put 方法
+## put 方法
 
 ```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
@@ -216,7 +216,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 8. 如果 `e != null` 就相当于存在相同的 key,那就需要将值覆盖。
 9. 最后判断是否需要进行扩容
 
-##### get 方法
+## get 方法
 
 ```java
 public V get(Object key) {
@@ -253,7 +253,7 @@ final Node<K,V> getNode(int hash, Object key) {
 
 
 
-#### HashMap存在的问题
+# HashMap存在的问题
 
 HashMap问题之一就是在并发情况下可能会出现死循环
 
@@ -271,7 +271,7 @@ for (int i = 0; i < 1000; i++) {
 
 
 
-#### HashMap的遍历方式
+# HashMap的遍历方式
 
 ```java
 Iterator<Map.Entry<String, Integer>> entryIterator = map.entrySet().iterator();
@@ -288,5 +288,3 @@ Iterator<String> iterator = map.keySet().iterator();
 ```
 
 建议使用第一种方式遍历，可以一次取出key和value
-
-##### 

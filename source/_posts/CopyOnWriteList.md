@@ -7,8 +7,6 @@ categories: Java基础
 
 
 
-# List的并发容器-CopyOnWriteList
-
 ## Vector和SynchronizedList
 
 ArrayList是用来代替Vector，Vector是线程安全的容器，因为它在方法上都加上了synchronized同步关键字
